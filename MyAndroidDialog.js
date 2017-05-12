@@ -33,7 +33,7 @@ let MyAndroidDialog = {
      * content 输入框默认值（暂时为android添加） （可填）
      */
     prompt(title, message, callbackOrButtons, type,content){
-        MyDialogModule.inputDialog({title:title,content:content,callbackOrButtons:callbackOrButtons},(msg)=>{
+        MyDialogModule.inputDialog({title:title,message:message,content:content,callbackOrButtons:callbackOrButtons},(msg)=>{
             callbackOrButtons[0].onPress(msg);
         },(msg)=>{
             if(callbackOrButtons[1]){
