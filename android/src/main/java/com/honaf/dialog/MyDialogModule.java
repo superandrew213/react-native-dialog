@@ -67,6 +67,9 @@ public class MyDialogModule extends ReactContextBaseJavaModule
             Activity context = this.getCurrentActivity();
             AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
             dialogBuilder.setTitle(map.getString("title"));
+            if (map.hasKey("message")) {
+              dialogBuilder.setMessage(map.getString("message"));
+            }
             final AppCompatEditText editText = new AppCompatEditText(context);
             editText.setText(map.hasKey("content") ? map.getString("content") : "");
             editText.setSingleLine(true);
