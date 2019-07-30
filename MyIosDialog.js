@@ -7,7 +7,7 @@
 import {
     Component,
     ActionSheetIOS,
-    AlertIOS
+    Alert
 } from 'react-native';
 
 let MyIosDialog = {
@@ -24,7 +24,7 @@ let MyIosDialog = {
     },
 
     prompt(title, message, callbackOrButtons, type){
-        AlertIOS.prompt(title,message,callbackOrButtons,type);
+        Alert.prompt(title,message,callbackOrButtons,type);
     },
 
 
